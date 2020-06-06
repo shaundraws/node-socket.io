@@ -4,15 +4,22 @@
     <script>
       let socket = io();
       let el;
-      let xpos;
-
+      let el2;
+      
       socket.on('time', (timeString) => {
         el = document.getElementById('server-time');
         el.innerHTML = 'Server time: ' + timeString;
-      });
+        el2 = document.getElementById('counter').html(data.countdown);
+});
+
+
+
+
     </script>
   </head>
   <body>
     <p id="server-time"></p>
+    <div id="counter"></div>
+<button id="reset">Reset!</button>
   </body>
 </html>
